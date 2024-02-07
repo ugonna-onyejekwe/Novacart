@@ -1,0 +1,301 @@
+.product_detail_con {
+  .part1 {
+    display: flex;
+    gap: 30px;
+
+    .img_con {
+      width: 45%;
+    }
+
+    .txt_con {
+      width: 55%;
+      padding-top: 20px;
+
+      h2 {
+        text-transform: capitalize;
+        font-size: 25px;
+      }
+
+      .brand {
+        text-transform: capitalize;
+        padding-top: 10px;
+        span {
+          color: var(--first-color);
+        }
+      }
+
+      h3 {
+        width: 100%;
+        padding: 20px 0;
+        border: 1px solid var(--border-color-alt);
+        border-left: none;
+        border-right: none;
+        font-size: 20px;
+        color: var(--first-color);
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin: 20px 0;
+
+        span {
+          font-size: 15px;
+          color: var(--text-color-alt);
+          text-decoration: line-through;
+        }
+      }
+
+      .txt {
+        padding-bottom: 30px;
+      }
+
+      ul {
+        li {
+          text-transform: capitalize;
+          padding-bottom: 10px;
+          list-style: none;
+          color: var(--text-color);
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+      }
+
+      .color_con {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        p {
+          text-transform: capitalize;
+          color: var(--title-color);
+          margin-right: 5px;
+        }
+
+        .pellet {
+          width: 20px;
+          height: 20px;
+          background: pink;
+          border-radius: 50%;
+
+          &:nth-child(2) {
+            background: orange;
+          }
+          &:nth-child(3) {
+            background: rgb(0, 132, 255);
+          }
+          &:nth-child(4) {
+            background: rgb(219, 67, 67);
+          }
+          &:nth-child(5) {
+            background: rgb(91, 219, 16);
+          }
+        }
+      }
+
+      .size_con {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        p {
+          text-transform: capitalize;
+          color: var(--title-color);
+          margin-right: 5px;
+        }
+
+        span {
+          height: 30px;
+          width: 30px;
+          border: 1px solid var(--border-color-alt);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-transform: uppercase;
+          font-size: 13px;
+          cursor: pointer;
+          transition: 0.4s ease;
+
+          &.active,
+          &:hover {
+            background: var(--first-color);
+            color: white;
+          }
+        }
+      }
+
+      .action_btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+
+        input {
+          border: 1px solid var(--border-color-alt);
+          padding: 15px 10px;
+          width: 70px;
+        }
+
+        button {
+          padding: 15px 10px;
+          border-radius: 0;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+
+  .part2 {
+    .nav {
+      margin-top: 50px;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+
+      a {
+        text-transform: capitalize;
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: 600;
+
+        &.active,
+        &:hover {
+          color: var(--first-color);
+        }
+      }
+    }
+
+    .wrapper {
+      margin-top: 30px;
+
+      .info_con {
+        .row {
+          display: flex;
+          align-items: center;
+
+          p {
+            flex: 1;
+            padding: 0 15px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            text-transform: capitalize;
+            border: 1px solid var(--border-color-alt);
+            border-bottom: none;
+
+            &:first-child {
+              color: var(--title-color);
+              border-right: none;
+            }
+            &:last-child {
+              color: var(--text-color-alt);
+              font-size: 13px;
+            }
+          }
+
+          &:last-child {
+            border-bottom: 1px solid var(--border-color-alt);
+          }
+        }
+      }
+
+      .review_section {
+        .box_con {
+          .box {
+            display: flex;
+            gap: 30px;
+            border-bottom: 1px solid var(--border-color-alt);
+            padding: 30px 0;
+
+            &:last-child {
+              border-bottom: none;
+            }
+
+            .img_con {
+              display: flex;
+              align-items: center;
+              flex-direction: column;
+              gap: 10px;
+
+              img {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+              }
+
+              h4 {
+                text-transform: capitalize;
+                font-size: 15px;
+              }
+            }
+
+            .txt_con {
+              .stars {
+                padding-bottom: 10px;
+                .icon {
+                  color: rgb(228, 200, 45);
+                }
+              }
+
+              .txt {
+                width: 80%;
+              }
+            }
+          }
+        }
+        .comment_section {
+          margin-top: 50px;
+
+          .stars {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--text-color-alt);
+            margin: 10px 0 30px 0;
+          }
+
+          input,
+          textarea {
+            border: 1px solid var(--border-color-alt);
+            width: 100%;
+            padding: 15px;
+          }
+
+          textarea {
+            height: 200px;
+          }
+
+          .input_con {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+
+          button {
+            margin-top: 20px;
+            padding: 20px 35px;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  .part3{
+    margin-top: 50px;
+
+    h2{
+        text-transform: capitalize;
+font-size: 25px;
+margin-bottom: 40px;
+
+        span{
+        color: var(--first-color);
+        }
+    }
+
+   
+  }
+}

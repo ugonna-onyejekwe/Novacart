@@ -1,0 +1,98 @@
+nav{
+    width: 100%;
+    box-shadow:  0 0 10px grey;
+    position: fixed;
+    left: 0;
+    top:0;
+    right: 0;
+    z-index: 1000;
+    background: var(--body-color);
+
+    .container{
+        display: flex;
+        align-items: center;
+        gap:70px;
+        padding: 25px 0;
+
+
+        .logo h1{
+            text-transform: capitalize;
+            font-size: 20px;
+           font-family: 'Lobster', sans-serif;
+
+            span{
+                color: var(--first-color);
+               font-family: 'Lobster', sans-serif;
+            }
+        }
+
+        .navigators{
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .links{
+                display: flex;
+                align-items: center;
+                gap: 50px;
+
+                a{
+                    text-transform: capitalize;
+                    text-decoration: none;
+                    font-weight: 500;
+                    color: var(--text-color);
+                    transition: 0.4s ease-in-out;
+
+                    &:hover,&.active{
+                        color: var(--first-color);
+                    }
+                }
+            }
+
+            .search_con{
+                border: 1px solid var(--border-color-alt);
+                border-radius: 5px;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 10px;
+
+                input{
+                    color: var(text-color-alt);
+                }
+            }
+        }
+
+        .action_btn{
+            display: flex;
+            align-items: center;
+            gap: 30px;
+
+            a{
+                position: relative;
+
+                span{
+                    position: absolute;
+                    top: -9px;
+                    right: -9px;
+                    background: var(--first-color);
+                    color: var(--body-color);
+                    padding: 5px;
+                  height: 18px;
+                  width: 18px;
+                  border-radius: 50%;
+                  font-size: 13px;
+                }
+
+
+            .icon{
+                font-size: 20px;
+                color: var(--text-color);
+            }
+
+        }
+        }
+    }
+}

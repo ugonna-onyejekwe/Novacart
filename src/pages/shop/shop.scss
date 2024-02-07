@@ -1,0 +1,25 @@
+.shop .navigations{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    gap:10px;
+
+    span{
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 13px;
+        cursor: pointer;
+        color: var(--text-color-alt);
+
+        .icon{
+            font-size: 20px;
+        }
+
+       
+
+        &.active, &:hover{
+      background: var(--first-color);
+            color:var(--body-color);
+        }
+    }
+}

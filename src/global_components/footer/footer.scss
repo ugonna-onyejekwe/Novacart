@@ -1,0 +1,127 @@
+footer{
+    margin-top: 100px;
+
+    .news_letter_con{
+        background: var(--first-color-alt);
+    padding: 25px 0;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h5{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        text-transform: capitalize;
+        font-size: 16px;
+
+        .icon{
+            font-size: 30px;
+        }
+       
+        }
+         p{
+            font-weight: 500;
+        }
+
+        .input_con{
+            display: flex;
+          
+
+            input{
+              padding: 0 10px 0 30px;
+              width: 250px;  
+            }
+
+            button{
+                padding: 15px  30px;
+                border-radius: 0;
+
+                &:hover{
+                    background: var(--first-color);
+                    opacity: 0.8;
+                    color: var(--body-color);
+                }
+            }
+        }
+    }
+    }
+
+    .main{
+      padding: 50px 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+
+        .box{
+            min-width: 200px;
+            flex:1 ;
+            
+        }
+
+        .part1{
+            min-width: 300px;
+            .logo h1{
+                font-weight: bold;
+              text-transform: capitalize;
+            font-family: 'Lobster', sans-serif;
+
+              span{
+              color: var(--first-color);
+              font-family: 'Lobster', sans-serif;
+              }
+            }
+            h3{
+                padding: 20px 0 20px 0;
+                text-transform: capitalize;
+                color: var(--text-color-alt);
+            }
+
+            p{
+                       padding-bottom: 15px;
+                span{
+                    font-weight: bold;
+                    color: var(--title-color);
+             
+                }
+            }
+
+            .social{
+                display: flex;
+                align-items: center;
+                gap:20px;
+
+                .icon{
+                    color: var(--text-color);
+                    font-size: 20px;
+                    transition: 0.4s ease-in-out;
+                    cursor: pointer;
+                    &:hover{
+                        color: var(--first-color);
+                    }
+                }
+            }
+        }
+
+        .part2, .part3, .part4{
+            h4{
+                text-transform: capitalize;
+                font-size: 18px;
+                padding-bottom: 20px;
+            }
+
+            p{
+                text-transform: capitalize;
+                padding-bottom: 15px;
+                transition: 0.4s ease-in-out;
+                cursor: pointer;
+
+                &:hover{
+                    transform: translateX(10px);
+                    color: var(--first-color);
+                }
+            }
+        }
+    }
+}
