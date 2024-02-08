@@ -1,11 +1,11 @@
-import category1 from "../assets/category-1.jpg"
-import category2 from "../assets/category-2.jpg"
-import category3 from "../assets/category-3.jpg"
-import category4 from "../assets/category-4.jpg"
-import category5 from "../assets/category-5.jpg"
-import category6 from "../assets/category-6.jpg"
-import category7 from "../assets/category-7.jpg"
-import category8 from "../assets/category-8.jpg"
+import category1 from "../assets/category-1.jpg";
+import category2 from "../assets/category-2.jpg";
+import category3 from "../assets/category-3.jpg";
+import category4 from "../assets/category-4.jpg";
+import category5 from "../assets/category-5.jpg";
+import category6 from "../assets/category-6.jpg";
+import category7 from "../assets/category-7.jpg";
+import category8 from "../assets/category-8.jpg";
 
 import product1 from "../assets/product1.jpg";
 import product2 from "../assets/product2.jpg";
@@ -34,10 +34,10 @@ import product24 from "../assets/product24.jpg";
 import product25 from "../assets/product25.jpg";
 import product26 from "../assets/product26.jpg";
 
-import blog1 from "../assets/blog1.jpg"
-import blog2 from "../assets/blog2.jpg"
-import blog3 from "../assets/blog3.jpg"
-import blog4 from "../assets/blog4.jpg"
+import blog1 from "../assets/blog1.jpg";
+import blog2 from "../assets/blog2.jpg";
+import blog3 from "../assets/blog3.jpg";
+import blog4 from "../assets/blog4.jpg";
 
 import { MdAddShoppingCart } from "react-icons/md";
 import { FaStar } from "react-icons/fa";
@@ -59,7 +59,10 @@ import { LuShoppingBag } from "react-icons/lu";
 import { GoPerson } from "react-icons/go";
 import { MdOutlineLogout } from "react-icons/md";
 import { IoKeyOutline } from "react-icons/io5";
-
+import { MdOutlineMail } from "react-icons/md";
+import { MdOutlineLocationOn } from "react-icons/md";
+import { MdOutlineLocalPhone } from "react-icons/md";
+import { IoTimeOutline } from "react-icons/io5";
 
 export const icons = {
   cart_icon: <MdAddShoppingCart className="icon" />,
@@ -77,237 +80,236 @@ export const icons = {
   instagram_icon: <FaInstagram className="icon" />,
   mail_icon: <MdOutlineAttachEmail className="icon" />,
   check_icon: <PiChecksBold className="icon" />,
-  dashboard_icon: <RiEqualizerFill  className="icon"/>,
-  order_icon: <LuShoppingBag  className="icon"/>,
-    profile_icon: <GoPerson className="icon" />,
-  password_icon:<IoKeyOutline className="icon" />,
+  dashboard_icon: <RiEqualizerFill className="icon" />,
+  order_icon: <LuShoppingBag className="icon" />,
+  profile_icon: <GoPerson className="icon" />,
+  password_icon: <IoKeyOutline className="icon" />,
   logout_icon: <MdOutlineLogout className="icon" />,
+  mail2_icon: <MdOutlineMail className="icon" />,
+  location_icon: <MdOutlineLocationOn className="icon" />,
+  phone_icon: <MdOutlineLocalPhone className="icon" />,
+  time_icon: <IoTimeOutline className="icon" />,
 };
 
 export const popular_categories = [
-    {
-        img: category1,
-        name:"t-shirt",
-},
-    {
-        img: category2,
-        name:"hand bag",
-},
-    {
-        img: category3,
-        name:"sandal",
-},
-    {
-        img: category4,
-        name:"cap",
-},
-    {
-        img: category5,
-        name:"shoe",
-},
-    {
-        img: category6,
-        name:"pillow",
-},
-    {
-        img: category7,
-        name:"trouser",
-},
-    {
-        img: category8,
-        name:"designers hat",
-},
-
-
-]
-
-
+  {
+    img: category1,
+    name: "t-shirt",
+  },
+  {
+    img: category2,
+    name: "hand bag",
+  },
+  {
+    img: category3,
+    name: "sandal",
+  },
+  {
+    img: category4,
+    name: "cap",
+  },
+  {
+    img: category5,
+    name: "shoe",
+  },
+  {
+    img: category6,
+    name: "pillow",
+  },
+  {
+    img: category7,
+    name: "trouser",
+  },
+  {
+    img: category8,
+    name: "designers hat",
+  },
+];
 
 export const products = [
-    {
-        img:product1,
-        name: "t-shirt",
-        cur_price: "$283.00",
-        odd_price: "$5473",
-        tag:"new"
-    },
-    {
-        img:product2,
-        name: "t-shirt",
-        cur_price: "$283.00",
-        odd_price: "$5473",
-        tag:"new"
-    },
-    {
-        img:product3,
-        name: "t-shirt",
-        cur_price: "$283.00",
-        odd_price: "$5473",
-        tag:"new"
-    },
-    {
-        img:product4,
-        name: "t-shirt",
-        cur_price: "$283.00",
-        odd_price: "$5473",
-        tag:"new"
-    },
-    {
-        img:product5,
-        name: "t-shirt",
-        cur_price: "$283.00",
-        odd_price: "$5473",
-        tag:"new"
-    },
-    {
-        img:product6,
-        name: "t-shirt",
-        cur_price: "$283.00",
-        odd_price: "$5473",
-        tag:"new"
-    },
-    {
-        img:product7,
-        name: "t-shirt",
-        cur_price: "$283.00",
-        odd_price: "$5473",
-        tag:"new"
-    },
-    {
-        img:product8,
-        name: "t-shirt",
-        cur_price: "$283.00",
-        odd_price: "$5473",
-        tag:"new"
-    },
-    {
-        img:product9,
-        name: "t-shirt",
-        cur_price: "$283.00",
-        odd_price: "$5473",
-        tag:"new"
-    },
-    {
-        img:product10,
-        name: "t-shirt",
-        cur_price: "$283.00",
-        odd_price: "$5473",
-        tag:"new"
-    },
-    {
-        img:product11,
-        name: "t-shirt",
-        cur_price: "$283.00",
-        odd_price: "$5473",
-        tag:"new"
-    },
-    {
-        img:product12,
-        name: "t-shirt",
-        cur_price: "$283.00",
-        odd_price: "$5473",
-        tag:"new"
-    },
-    {
-        img:product13,
-        name: "t-shirt",
-        cur_price: "$283.00",
-        odd_price: "$5473",
-        tag:"new"
-    },
-    {
-        img:product14,
-        name: "t-shirt",
-        cur_price: "$283.00",
-        odd_price: "$5473",
-        tag:"new"
-    },
-    {
-        img:product15,
-        name: "t-shirt",
-        cur_price: "$283.00",
-        odd_price: "$5473",
-        tag:"new"
-    },
-    {
-        img:product16,
-        name: "t-shirt",
-        cur_price: "$283.00",
-        odd_price: "$5473",
-        tag:"new"
-    },
-    {
-        img:product17,
-        name: "t-shirt",
-        cur_price: "$283.00",
-        odd_price: "$5473",
-        tag:"new"
-    },
-    {
-        img:product18,
-        name: "t-shirt",
-        cur_price: "$283.00",
-        odd_price: "$5473",
-        tag:"new"
-    },
-    {
-        img:product19,
-        name: "t-shirt",
-        cur_price: "$283.00",
-        odd_price: "$5473",
-        tag:"new"
-    },
-    {
-        img:product20,
-        name: "t-shirt",
-        cur_price: "$283.00",
-        odd_price: "$5473",
-        tag:"new"
-    },
-    {
-        img:product21,
-        name: "t-shirt",
-        cur_price: "$283.00",
-        odd_price: "$5473",
-        tag:"new"
-    },
-    {
-        img:product22,
-        name: "t-shirt",
-        cur_price: "$283.00",
-        odd_price: "$5473",
-        tag:"new"
-    },
-    {
-        img:product23,
-        name: "t-shirt",
-        cur_price: "$283.00",
-        odd_price: "$5473",
-        tag:"new"
-    },
-    {
-        img:product24,
-        name: "t-shirt",
-        cur_price: "$283.00",
-        odd_price: "$5473",
-        tag:"new"
-    },
-    {
-        img:product25,
-        name: "t-shirt",
-        cur_price: "$283.00",
-        odd_price: "$5473",
-        tag:"new"
-    },
-    {
-        img:product26,
-        name: "t-shirt",
-        cur_price: "$283.00",
-        odd_price: "$5473",
-        tag:"new"
-    },
-
-]
+  {
+    img: product1,
+    name: "t-shirt",
+    cur_price: "$283.00",
+    odd_price: "$5473",
+    tag: "new",
+  },
+  {
+    img: product2,
+    name: "t-shirt",
+    cur_price: "$283.00",
+    odd_price: "$5473",
+    tag: "new",
+  },
+  {
+    img: product3,
+    name: "t-shirt",
+    cur_price: "$283.00",
+    odd_price: "$5473",
+    tag: "new",
+  },
+  {
+    img: product4,
+    name: "t-shirt",
+    cur_price: "$283.00",
+    odd_price: "$5473",
+    tag: "new",
+  },
+  {
+    img: product5,
+    name: "t-shirt",
+    cur_price: "$283.00",
+    odd_price: "$5473",
+    tag: "new",
+  },
+  {
+    img: product6,
+    name: "t-shirt",
+    cur_price: "$283.00",
+    odd_price: "$5473",
+    tag: "new",
+  },
+  {
+    img: product7,
+    name: "t-shirt",
+    cur_price: "$283.00",
+    odd_price: "$5473",
+    tag: "new",
+  },
+  {
+    img: product8,
+    name: "t-shirt",
+    cur_price: "$283.00",
+    odd_price: "$5473",
+    tag: "new",
+  },
+  {
+    img: product9,
+    name: "t-shirt",
+    cur_price: "$283.00",
+    odd_price: "$5473",
+    tag: "new",
+  },
+  {
+    img: product10,
+    name: "t-shirt",
+    cur_price: "$283.00",
+    odd_price: "$5473",
+    tag: "new",
+  },
+  {
+    img: product11,
+    name: "t-shirt",
+    cur_price: "$283.00",
+    odd_price: "$5473",
+    tag: "new",
+  },
+  {
+    img: product12,
+    name: "t-shirt",
+    cur_price: "$283.00",
+    odd_price: "$5473",
+    tag: "new",
+  },
+  {
+    img: product13,
+    name: "t-shirt",
+    cur_price: "$283.00",
+    odd_price: "$5473",
+    tag: "new",
+  },
+  {
+    img: product14,
+    name: "t-shirt",
+    cur_price: "$283.00",
+    odd_price: "$5473",
+    tag: "new",
+  },
+  {
+    img: product15,
+    name: "t-shirt",
+    cur_price: "$283.00",
+    odd_price: "$5473",
+    tag: "new",
+  },
+  {
+    img: product16,
+    name: "t-shirt",
+    cur_price: "$283.00",
+    odd_price: "$5473",
+    tag: "new",
+  },
+  {
+    img: product17,
+    name: "t-shirt",
+    cur_price: "$283.00",
+    odd_price: "$5473",
+    tag: "new",
+  },
+  {
+    img: product18,
+    name: "t-shirt",
+    cur_price: "$283.00",
+    odd_price: "$5473",
+    tag: "new",
+  },
+  {
+    img: product19,
+    name: "t-shirt",
+    cur_price: "$283.00",
+    odd_price: "$5473",
+    tag: "new",
+  },
+  {
+    img: product20,
+    name: "t-shirt",
+    cur_price: "$283.00",
+    odd_price: "$5473",
+    tag: "new",
+  },
+  {
+    img: product21,
+    name: "t-shirt",
+    cur_price: "$283.00",
+    odd_price: "$5473",
+    tag: "new",
+  },
+  {
+    img: product22,
+    name: "t-shirt",
+    cur_price: "$283.00",
+    odd_price: "$5473",
+    tag: "new",
+  },
+  {
+    img: product23,
+    name: "t-shirt",
+    cur_price: "$283.00",
+    odd_price: "$5473",
+    tag: "new",
+  },
+  {
+    img: product24,
+    name: "t-shirt",
+    cur_price: "$283.00",
+    odd_price: "$5473",
+    tag: "new",
+  },
+  {
+    img: product25,
+    name: "t-shirt",
+    cur_price: "$283.00",
+    odd_price: "$5473",
+    tag: "new",
+  },
+  {
+    img: product26,
+    name: "t-shirt",
+    cur_price: "$283.00",
+    odd_price: "$5473",
+    tag: "new",
+  },
+];
 
 export const blog = [
   {
