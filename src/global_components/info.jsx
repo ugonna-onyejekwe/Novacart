@@ -63,6 +63,10 @@ import { MdOutlineMail } from "react-icons/md";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { MdOutlineLocalPhone } from "react-icons/md";
 import { IoTimeOutline } from "react-icons/io5";
+import { MdOutlineDeleteOutline } from "react-icons/md";
+import { IoMdClose } from "react-icons/io";
+import { MdContentPaste } from "react-icons/md";
+import { GrUpdate } from "react-icons/gr";
 
 export const icons = {
   cart_icon: <MdAddShoppingCart className="icon" />,
@@ -89,6 +93,10 @@ export const icons = {
   location_icon: <MdOutlineLocationOn className="icon" />,
   phone_icon: <MdOutlineLocalPhone className="icon" />,
   time_icon: <IoTimeOutline className="icon" />,
+  delete_icon: <MdOutlineDeleteOutline className="icon" />,
+  close_icon: <IoMdClose className="icon" />,
+  paste_icon: <MdContentPaste className="icon" />,
+  update_icon: <GrUpdate className="icon" />,
 };
 
 export const popular_categories = [

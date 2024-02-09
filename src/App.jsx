@@ -15,6 +15,7 @@ import { Change_password } from "./component/change_password";
 import { Logout } from "./component/logout";
 import { Blog } from "./pages/blog/blog";
 import { Contact } from "./pages/contact/contact";
+import { Cart } from "./pages/cart/cart";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
         </Route>
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
       <Footer />
     </>

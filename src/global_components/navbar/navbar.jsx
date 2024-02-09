@@ -29,7 +29,7 @@ export const Navbar = () => {
           </div>
         </div>
         <div className="action_btn">
-          <Link>
+          <Link to={"/cart"}>
             {icons.cart_icon2} <span>0</span>
           </Link>
           <Link>
