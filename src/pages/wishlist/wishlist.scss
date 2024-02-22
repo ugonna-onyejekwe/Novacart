@@ -1,0 +1,74 @@
+.wishlist_con {
+  .empty {
+    text-align: center;
+    font-family: var(--font);
+    text-transform: capitalize;
+    color: var(--text-color-alt);
+  }
+  .top_bar {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 30px;
+    width: 100%;
+    min-width: fit-content;
+
+    div:not(:first-child) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    div {
+      flex: 1;
+      min-width: 110px;
+      width: 100%;
+      text-transform: capitalize;
+      font-size: 13px;
+    }
+  }
+  .box {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding: 30px 0;
+    width: 100%;
+    min-width: fit-content;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    div:not(:first-child) {
+      text-transform: capitalize;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    div {
+      flex: 1;
+      min-width: 120px;
+      width: 100%;
+    }
+
+    .view_btn a {
+      width: fit-content;
+      color: var(--first-color);
+      padding: 10px 20px;
+    }
+
+    .img_con {
+      img {
+        width: 90px;
+        height: 90px;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    .wrapper {
+      overflow: scroll;
+    }
+  }
+}

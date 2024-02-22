@@ -1,26 +1,82 @@
 import "./navbar.scss";
-import { icons } from "../info";
-import { Link } from "react-router-dom";
+import { icons } from "../data/info";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { useState } from "react";
+import { useShoppingCart } from "../context/context";
 
 export const Navbar = () => {
+  const location = useLocation();
+  const { pathname } = location;
+
+  const [show_menu, setShow_menu] = useState(false);
+  const { cartItems, wishlists } = useShoppingCart();
+  const shownavstyle = {
+    display: "block",
+  };
+  const removenavstyle = {
+    display: "none",
+  };
+
   return (
-    <nav>
+    <nav style={pathname === "/login" ? removenavstyle : shownavstyle}>
       <div className="container">
         <div className="logo">
-          <h1>
-            <span>nova</span>cart
-          </h1>
+          <Link to={"/"}>
+            <h1>
+              <span>nova</span>cart
+            </h1>
+          </Link>
         </div>
-        <div className="navigators">
+        <div className={show_menu ? "navigators active" : "navigators"}>
           <div className="links">
-            <Link className="active" to={"/"}>
+            <span
+              className="close_btn"
+              onClick={() => setShow_menu(!show_menu)}
+            >
+              {icons.close_icon}
+            </span>
+            <NavLink
+              activeclassName="active"
+              to={"/"}
+              onClick={() => setShow_menu(!show_menu)}
+            >
               home
-            </Link>
-            <Link to="/shop">shop</Link>
-            <Link to={"/account"}>my account</Link>
-            <Link to={"/blog"}>blog</Link>
-            <Link to={"/contact"}>contact</Link>
-            <Link>login</Link>
+            </NavLink>
+            <NavLink
+              activeclassName="active"
+              to="/shop"
+              onClick={() => setShow_menu(!show_menu)}
+            >
+              shop
+            </NavLink>
+            <NavLink
+              activeclassName="active"
+              to={"/account"}
+              onClick={() => setShow_menu(!show_menu)}
+            >
+              my account
+            </NavLink>
+            <NavLink
+              activeclassName="active"
+              to={"/blog"}
+              onClick={() => setShow_menu(!show_menu)}
+            >
+              blog
+            </NavLink>
+            <NavLink
+              activeclassName="active"
+              to={"/contact"}
+              onClick={() => setShow_menu(!show_menu)}
+            >
+              contact
+            </NavLink>
+            <NavLink
+              activeclassName="active"
+              to={"/login"}
+              onClick={() => setShow_menu(!show_menu)}
+            >
+              login
+            </NavLink>
           </div>
 
           <div className="search_con">
@@ -30,13 +86,18 @@ export const Navbar = () => {
         </div>
         <div className="action_btn">
           <Link to={"/cart"}>
-            {icons.cart_icon2} <span>0</span>
+            {icons.cart_icon2} <span>{cartItems.length}</span>
           </Link>
-          <Link>
-            {icons.favourite} <span>0</span>
+          <Link to={"/wishlist"}>
+            {icons.favourite} <span>{wishlists.length}</span>
           </Link>
+          <span className="menu_btn" onClick={() => setShow_menu(!show_menu)}>
+            {icons.menu_icon}
+          </span>
         </div>
       </div>
+
+      <div className={show_menu ? "back_drop active" : "back_drop"}></div>
     </nav>
   );
 };

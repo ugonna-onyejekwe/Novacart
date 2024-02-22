@@ -4,13 +4,13 @@ import {
   icons,
   popular_categories,
   products,
-} from "../../global_components/info";
+} from "../../global_components/data/info";
 import { Link } from "react-router-dom";
 import banner1 from "../../assets/home_bg1.jpg";
 import banner2 from "../../assets/home_bg5.jpg";
 import banner3 from "../../assets/home_bg2.jpg";
 import banner4 from "../../assets/home_bg4.jpg";
-import banner5 from "../../assets/home_bg3.jpg";
+import banner5 from "../../assets/home_bg4.jpg";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -20,8 +20,10 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
+import { useShoppingCart } from "../../global_components/context/context";
 
 export const Home = () => {
+  const { add_to_cart, add_to_wishlist } = useShoppingCart();
   return (
     <div className="home_wrapper">
       <section className="home" id="home">
@@ -31,11 +33,11 @@ export const Home = () => {
             <h2>super value deals</h2>
             <h1>on all products</h1>
             <p>Save more with coupons & up to 70% off</p>
-            <button>shop now</button>
-          </div>
 
-          <div className="img_con">
-            <img src={home_img} alt="img" />
+            <div className="img_con">
+              <img src={home_img} alt="img" />
+            </div>
+            <button>shop now</button>
           </div>
         </div>
       </section>
@@ -56,11 +58,25 @@ export const Home = () => {
             <Swiper
               spaceBetween={20}
               modules={[Navigation, Autoplay]}
-              slidesPerView={6}
+              slidesPerView={2}
               navigation={{
                 nextEl: "swiper-next-arrow",
                 prevEl: "swiper-prev-arrow",
                 clickable: true,
+              }}
+              breakpoints={{
+                425: {
+                  slidesPerView: 2,
+                },
+                500: {
+                  slidesPerView: 3,
+                },
+                768: {
+                  slidesPerView: 4,
+                },
+                1024: {
+                  slidesPerView: 6,
+                },
               }}
             >
               {popular_categories.map((i, key) => {
@@ -95,13 +111,18 @@ export const Home = () => {
                     <img src={i.img} alt="img" />
 
                     <div className="action_btns">
-                      <Link to={`/${i.name}/${key}`}>
+                      <Link to={`/${i.name}/${i.id}`}>
                         <div className=" btn">
                           <button>{icons.view_icon}</button>
                           <span>view</span>
                         </div>
                       </Link>
-                      <div className=" btn">
+                      <div
+                        className=" btn"
+                        onClick={() => {
+                          add_to_wishlist(i.id);
+                        }}
+                      >
                         <button>{icons.favourite}</button>
                         <span>favourite</span>
                       </div>
@@ -128,7 +149,13 @@ export const Home = () => {
                         </h4>
                       </div>
                       <div className="cart_btn btn">
-                        <button>{icons.cart_icon}</button>
+                        <button
+                          onClick={() => {
+                            add_to_cart(i.id);
+                          }}
+                        >
+                          {icons.cart_icon}
+                        </button>
                         <span>add to cart</span>
                       </div>
                     </div>
@@ -138,7 +165,7 @@ export const Home = () => {
             })}
           </div>
           <div className="btn_con">
-            <Link to="/">
+            <Link to="/store">
               <button>more product</button>
             </Link>
           </div>
@@ -207,13 +234,24 @@ export const Home = () => {
             <Swiper
               modules={[Navigation, Autoplay]}
               spaceBetween={20}
-              slidesPerView={4}
+              slidesPerView={1}
               navigation={{
                 nextEl: "swiper-next-arrow",
                 prevEl: "swiper-prev-arrow",
                 clickable: true,
               }}
               className="product_wrapper"
+              breakpoints={{
+                600: {
+                  slidesPerView: 2,
+                },
+                1024: {
+                  slidesPerView: 3,
+                },
+                1030: {
+                  slidesPerView: 4,
+                },
+              }}
             >
               {products.slice(5, 14).map((i, key) => {
                 return (
@@ -222,13 +260,18 @@ export const Home = () => {
                       <img src={i.img} alt="img" />
 
                       <div className="action_btns">
-                        <Link to={`/${i.name}/${key}`}>
+                        <Link to={`/${i.name}/${i.id}`}>
                           <div className=" btn">
                             <button>{icons.view_icon}</button>
                             <span>view</span>
                           </div>
                         </Link>
-                        <div className=" btn">
+                        <div
+                          className=" btn"
+                          onClick={() => {
+                            add_to_wishlist(i.id);
+                          }}
+                        >
                           <button>{icons.favourite}</button>
                           <span>favourite</span>
                         </div>
@@ -255,7 +298,13 @@ export const Home = () => {
                           </h4>
                         </div>
                         <div className="cart_btn btn">
-                          <button>{icons.cart_icon}</button>
+                          <button
+                            onClick={() => {
+                              add_to_cart(i.id);
+                            }}
+                          >
+                            {icons.cart_icon}
+                          </button>
                           <span>add to cart</span>
                         </div>
                       </div>

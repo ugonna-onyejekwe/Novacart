@@ -61,12 +61,26 @@
         gap: 10px;
       }
 
-      textarea{
+      textarea {
         height: 250px;
       }
-      button{
+      button {
         width: fit-content;
       }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact_section .wrapper {
+    flex-direction: column;
+
+    .txt_con {
+      width: 100%;
+    }
+
+    form {
+      width: 100%;
     }
   }
 }

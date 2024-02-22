@@ -1,9 +1,12 @@
 import "./shop.scss";
-import { products } from "../../global_components/info";
-import { icons } from "../../global_components/info";
+import { products, icons } from "../../global_components/data/info";
 import { Link } from "react-router-dom";
+import { useShoppingCart } from "../../global_components/context/context";
 
 export const Shop = () => {
+  const { add_to_cart, add_to_wishlist } = useShoppingCart();
+    window.scroll(0, 0);
+
   return (
     <>
       <section className="shop">
@@ -15,21 +18,25 @@ export const Shop = () => {
           </div>
         </div>
         <div className="product_wrapper container">
-                  {products.map(( i, key) => {
-              
+          {products.map((i, key) => {
             return (
               <div className="product_box" key={key}>
                 <div className="img_con">
                   <img src={i.img} alt="img" />
 
                   <div className="action_btns">
-                            <Link to={`/${i.name}/${key}` }>
+                    <Link to={`/${i.name}/${i.id}`}>
                       <div className=" btn">
                         <button>{icons.view_icon}</button>
                         <span>view</span>
                       </div>
                     </Link>
-                    <div className=" btn">
+                    <div
+                      className=" btn"
+                      onClick={() => {
+                        add_to_wishlist(i.id);
+                      }}
+                    >
                       <button>{icons.favourite}</button>
                       <span>favourite</span>
                     </div>
@@ -56,7 +63,13 @@ export const Shop = () => {
                       </h4>
                     </div>
                     <div className="cart_btn btn">
-                      <button>{icons.cart_icon}</button>
+                      <button
+                        onClick={() => {
+                          add_to_cart(i.id);
+                        }}
+                      >
+                        {icons.cart_icon}
+                      </button>
                       <span>add to cart</span>
                     </div>
                   </div>
@@ -67,12 +80,10 @@ export const Shop = () => {
         </div>
         <div className="navigations container">
           <span className="active">1</span>
-          <span >2</span>
-          <span >3</span>
-          <span >...</span>
-          <span >
-                      {icons.right_arrow}
-          </span>
+          <span>2</span>
+          <span>3</span>
+          <span>...</span>
+          <span>{icons.right_arrow}</span>
         </div>
       </section>
     </>

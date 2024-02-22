@@ -1,43 +1,42 @@
-import category1 from "../assets/category-1.jpg";
-import category2 from "../assets/category-2.jpg";
-import category3 from "../assets/category-3.jpg";
-import category4 from "../assets/category-4.jpg";
-import category5 from "../assets/category-5.jpg";
-import category6 from "../assets/category-6.jpg";
-import category7 from "../assets/category-7.jpg";
-import category8 from "../assets/category-8.jpg";
+import category1 from "../../assets/category-1.jpg";
+import category2 from "../../assets/category-2.jpg";
+import category3 from "../../assets/category-3.jpg";
+import category4 from "../../assets/category-4.jpg";
+import category5 from "../../assets/category-5.jpg";
+import category6 from "../../assets/category-6.jpg";
+import category7 from "../../assets/category-7.jpg";
+import category8 from "../../assets/category-8.jpg";
 
-import product1 from "../assets/product1.jpg";
-import product2 from "../assets/product2.jpg";
-import product3 from "../assets/product3.jpg";
-import product4 from "../assets/product4.jpg";
-import product5 from "../assets/product5.jpg";
-import product6 from "../assets/product6.jpg";
-import product7 from "../assets/product7.jpg";
-import product8 from "../assets/product8.jpg";
-import product9 from "../assets/product9.jpg";
-import product10 from "../assets/product10.jpg";
-import product11 from "../assets/product11.jpg";
-import product12 from "../assets/product12.jpg";
-import product13 from "../assets/product13.jpg";
-import product14 from "../assets/product14.jpg";
-import product15 from "../assets/product15.jpg";
-import product16 from "../assets/product16.jpg";
-import product17 from "../assets/product17.jpg";
-import product18 from "../assets/product18.jpg";
-import product19 from "../assets/product19.jpg";
-import product20 from "../assets/product20.jpg";
-import product21 from "../assets/product21.jpg";
-import product23 from "../assets/product23.jpg";
-import product22 from "../assets/product22.jpg";
-import product24 from "../assets/product24.jpg";
-import product25 from "../assets/product25.jpg";
-import product26 from "../assets/product26.jpg";
+import product1 from "../../assets/product1.jpg";
+import product2 from "../../assets/product2.jpg";
+import product3 from "../../assets/product3.jpg";
+import product4 from "../../assets/product4.jpg";
+import product5 from "../../assets/product5.jpg";
+import product6 from "../../assets/product6.jpg";
+import product7 from "../../assets/product7.jpg";
+import product8 from "../../assets/product8.jpg";
+import product9 from "../../assets/product9.jpg";
+import product10 from "../../assets/product10.jpg";
+import product11 from "../../assets/product11.jpg";
+import product12 from "../../assets/product12.jpg";
+import product13 from "../../assets/product13.jpg";
+import product14 from "../../assets/product14.jpg";
+import product15 from "../../assets/product15.jpg";
+import product16 from "../../assets/product16.jpg";
+import product17 from "../../assets/product17.jpg";
+import product18 from "../../assets/product18.jpg";
+import product19 from "../../assets/product19.jpg";
+import product20 from "../../assets/product20.jpg";
+import product21 from "../../assets/product21.jpg";
+import product23 from "../../assets/product23.jpg";
+import product22 from "../../assets/product22.jpg";
+import product25 from "../../assets/product25.jpg";
+import product26 from "../../assets/product26.jpg";
 
-import blog1 from "../assets/blog1.jpg";
-import blog2 from "../assets/blog2.jpg";
-import blog3 from "../assets/blog3.jpg";
-import blog4 from "../assets/blog4.jpg";
+import blog1 from "../../assets/blog1.jpg";
+import blog2 from "../../assets/blog2.jpg";
+import blog3 from "../../assets/blog3.jpg";
+import blog4 from "../../assets/blog4.jpg";
 
 import { MdAddShoppingCart } from "react-icons/md";
 import { FaStar } from "react-icons/fa";
@@ -67,6 +66,8 @@ import { MdOutlineDeleteOutline } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 import { MdContentPaste } from "react-icons/md";
 import { GrUpdate } from "react-icons/gr";
+import { IoIosMenu } from "react-icons/io";
+import { IoLogoGoogleplus } from "react-icons/io";
 
 export const icons = {
   cart_icon: <MdAddShoppingCart className="icon" />,
@@ -97,6 +98,8 @@ export const icons = {
   close_icon: <IoMdClose className="icon" />,
   paste_icon: <MdContentPaste className="icon" />,
   update_icon: <GrUpdate className="icon" />,
+  menu_icon: <IoIosMenu className="icon" />,
+  google_icon: <IoLogoGoogleplus className="icon"/>,
 };
 
 export const popular_categories = [
@@ -137,185 +140,179 @@ export const popular_categories = [
 export const products = [
   {
     img: product1,
-    name: "t-shirt",
-    cur_price: "$283.00",
-    odd_price: "$5473",
-    tag: "new",
+    name: "designers t-shirt",
+    cur_price: "$21.00",
+    odd_price: "$25.00",
+    id: 1,
   },
   {
     img: product2,
-    name: "t-shirt",
-    cur_price: "$283.00",
-    odd_price: "$5473",
-    tag: "new",
+    name: "designers t-shirt",
+    cur_price: "$21.00",
+    odd_price: "$25.00",
+    id: 2,
   },
   {
     img: product3,
-    name: "t-shirt",
-    cur_price: "$283.00",
-    odd_price: "$5473",
-    tag: "new",
+    name: "nick shoe",
+    cur_price: "$30.00",
+    odd_price: "$35.00",
+    id: 3,
   },
   {
     img: product4,
-    name: "t-shirt",
-    cur_price: "$283.00",
-    odd_price: "$5473",
-    tag: "new",
+    name: "nick shoe",
+    cur_price: "$30.00",
+    odd_price: "$35.00",
+    id: 4,
   },
   {
     img: product5,
-    name: "t-shirt",
-    cur_price: "$283.00",
-    odd_price: "$5473",
-    tag: "new",
+    name: "jumpsuit",
+    cur_price: "$13.00",
+    odd_price: "$15.00",
+    id: 5,
   },
   {
     img: product6,
-    name: "t-shirt",
-    cur_price: "$283.00",
-    odd_price: "$5473",
-    tag: "new",
+    name: "jumpsuit",
+    cur_price: "$13.00",
+    odd_price: "$15.00",
+    id: 6,
   },
   {
     img: product7,
-    name: "t-shirt",
-    cur_price: "$283.00",
-    odd_price: "$5473",
-    tag: "new",
+    name: "designers hat",
+    cur_price: "$15.00",
+    odd_price: "$20.00",
+    id: 7,
   },
   {
     img: product8,
-    name: "t-shirt",
-    cur_price: "$283.00",
-    odd_price: "$5473",
-    tag: "new",
+    name: "shirt",
+    cur_price: "$21.00",
+    odd_price: "$25.00",
+    id: 8,
   },
   {
     img: product9,
-    name: "t-shirt",
-    cur_price: "$283.00",
-    odd_price: "$5473",
-    tag: "new",
+    name: "colorful skit",
+    cur_price: "$13.00",
+    odd_price: "$15.00",
+    id: 9,
   },
   {
     img: product10,
-    name: "t-shirt",
-    cur_price: "$283.00",
-    odd_price: "$5473",
-    tag: "new",
+    name: "japan shirt",
+    cur_price: "$13.00",
+    odd_price: "$15.00",
+    id: 10,
   },
   {
     img: product11,
     name: "t-shirt",
     cur_price: "$283.00",
     odd_price: "$5473",
-    tag: "new",
+    id: 11,
   },
   {
     img: product12,
-    name: "t-shirt",
-    cur_price: "$283.00",
-    odd_price: "$5473",
-    tag: "new",
+    name: "head warmer",
+    cur_price: "$13.00",
+    odd_price: "$17.00",
+    id: 12,
   },
   {
     img: product13,
-    name: "t-shirt",
-    cur_price: "$283.00",
-    odd_price: "$5473",
-    tag: "new",
+    name: "jacket",
+    cur_price: "$30.00",
+    odd_price: "$35.00",
+    id: 13,
   },
   {
     img: product14,
-    name: "t-shirt",
-    cur_price: "$283.00",
-    odd_price: "$5473",
-    tag: "new",
+    name: "sandal",
+    cur_price: "$13.00",
+    odd_price: "$15.00",
+    id: 14,
   },
   {
     img: product15,
-    name: "t-shirt",
-    cur_price: "$283.00",
-    odd_price: "$5473",
-    tag: "new",
+    name: "sandal",
+    cur_price: "$30.00",
+    odd_price: "$35.00",
+    id: 15,
   },
   {
     img: product16,
-    name: "t-shirt",
-    cur_price: "$283.00",
-    odd_price: "$5473",
-    tag: "new",
+    name: "jumpsuit",
+    cur_price: "$30.00",
+    odd_price: "$40.00",
+    id: 16,
   },
   {
     img: product17,
-    name: "t-shirt",
-    cur_price: "$283.00",
-    odd_price: "$5473",
-    tag: "new",
+    name: "jumpsuit",
+    cur_price: "$30.00",
+    odd_price: "$40.00",
+    id: 17,
   },
   {
     img: product18,
-    name: "t-shirt",
-    cur_price: "$283.00",
-    odd_price: "$5473",
-    tag: "new",
+    name: "shirt",
+    cur_price: "$20.00",
+    odd_price: "$30",
+    id: 18,
   },
   {
     img: product19,
-    name: "t-shirt",
-    cur_price: "$283.00",
-    odd_price: "$5473",
-    tag: "new",
+    name: "hand bag",
+    cur_price: "$30.00",
+    odd_price: "$34.00",
+    id: 19,
   },
   {
     img: product20,
-    name: "t-shirt",
-    cur_price: "$283.00",
-    odd_price: "$5473",
-    tag: "new",
+    name: "hand bag",
+    cur_price: "$20.00",
+    odd_price: "$25.00",
+    id: 20,
   },
   {
     img: product21,
-    name: "t-shirt",
-    cur_price: "$283.00",
-    odd_price: "$5473",
-    tag: "new",
+    name: "hand bag",
+    cur_price: "$40.00",
+    odd_price: "$45.00",
+    id: 21,
   },
   {
     img: product22,
-    name: "t-shirt",
-    cur_price: "$283.00",
-    odd_price: "$5473",
-    tag: "new",
+    name: "pillow",
+    cur_price: "$10.00",
+    odd_price: "$15.00",
+    id: 22,
   },
   {
     img: product23,
-    name: "t-shirt",
-    cur_price: "$283.00",
-    odd_price: "$5473",
-    tag: "new",
+    name: "cross bag",
+    cur_price: "$40.00",
+    odd_price: "$45.00",
+    id: 23,
   },
-  {
-    img: product24,
-    name: "t-shirt",
-    cur_price: "$283.00",
-    odd_price: "$5473",
-    tag: "new",
-  },
+ 
   {
     img: product25,
     name: "t-shirt",
-    cur_price: "$283.00",
-    odd_price: "$5473",
-    tag: "new",
+    cur_price: "$30.00",
+    odd_price: "$35.00",
+    id: 25,
   },
   {
     img: product26,
     name: "t-shirt",
-    cur_price: "$283.00",
-    odd_price: "$5473",
-    tag: "new",
+    cur_price: "$30.00",
+    odd_price: "$35.00",
+    id: 26,
   },
 ];
 

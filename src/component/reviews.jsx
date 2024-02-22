@@ -1,4 +1,4 @@
-import { icons } from "../global_components/info";
+import { icons } from "../global_components/data/info";
 import client1 from "../assets/avatar-1.jpg"
 import client2 from "../assets/avatar-2.jpg"
 import client3 from "../assets/avatar-3.jpg"

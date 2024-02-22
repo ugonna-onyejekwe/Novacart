@@ -8,7 +8,7 @@
       height: 600px;
       display: flex;
       align-items: center;
-      gap: 40px;
+      position: relative;
 
       .txt_con {
         width: 40%;
@@ -16,13 +16,11 @@
         h4 {
           text-transform: capitalize;
           font-size: 18px;
-          padding-bottom: 10px;
         }
 
         h2 {
           font-size: 30px;
           text-transform: capitalize;
-          padding-bottom: 10px;
         }
 
         h1 {
@@ -33,16 +31,20 @@
         }
 
         p {
-          padding-top: 20px;
+          padding-top: 10px;
         }
 
         button {
           margin-top: 30px;
         }
-      }
 
-      .img_con {
-        width: 60%;
+        .img_con {
+          width: 60%;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+        }
       }
     }
   }
@@ -324,44 +326,331 @@
       }
     }
 
-      .part2 {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+    .part2 {
+      display: flex;
+      align-items: center;
+      gap: 20px;
 
-    .box {
-      height: 250px;
-      flex: 1;
-      position: relative;
-      .img_con {
-        width: 100%;
-        height: 100%;
-      }
-
-      .txt_con {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 50px;
-        color: var(--body-color);
-
-        h3 {
-          text-transform: capitalize;
-          font-size: 25px;
-          color: var(--body-color);
-          padding-top: 10px;
+      .box {
+        height: 250px;
+        flex: 1;
+        position: relative;
+        .img_con {
+          width: 100%;
+          height: 100%;
         }
 
-        p {
-          text-transform: capitalize;
-          padding: 20px 0;
-          color: rgb(218, 48, 48);
-          font-weight: bold;
+        .txt_con {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 50px;
+          color: var(--body-color);
+
+          h3 {
+            text-transform: capitalize;
+            font-size: 25px;
+            color: var(--body-color);
+            padding-top: 10px;
+          }
+
+          p {
+            text-transform: capitalize;
+            padding: 20px 0;
+            color: rgb(218, 48, 48);
+            font-weight: bold;
+          }
         }
       }
     }
   }
+}
+
+@media (max-width: 1024px) {
+  .home_wrapper {
+    .deal_section {
+      .container {
+        gap: 10px;
+
+        .box {
+          padding: 40px 20px;
+
+          h2 {
+            font-size: 25px;
+          }
+          p {
+            text-transform: capitalize;
+          }
+
+          h3 {
+            font-size: 20px;
+          }
+          h4 {
+            font-size: 15px;
+            span {
+              font-size: 10px;
+            }
+          }
+
+          .time_limit {
+            .time {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+
+              span {
+                font-size: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .event_section {
+      .container {
+        gap: 10px;
+      }
+      .part1 {
+        gap: 10px;
+
+        .txt_con {
+          left: 20px;
+        }
+      }
+
+      .part2 {
+        gap: 10px;
+
+        .box {
+          .txt_con {
+            left: 20px;
+          }
+        }
+      }
+    }
   }
+}
 
+@media (max-width: 768px) {
+  .home_wrapper {
+    .home {
+      margin-top: 140px;
+      padding-bottom: 30px;
 
+      .container {
+        height: fit-content;
+
+        .txt_con {
+          width: 100%;
+          text-align: center;
+
+          .img_con {
+            width: 100%;
+            position: relative;
+            top: 0;
+            right: 0;
+            transform: translateY(0);
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+
+    .event_section {
+      .part1 {
+        .box {
+          height: 300px;
+          .txt_con {
+            left: 20px;
+            h5 {
+              font-size: 14px;
+            }
+
+            h3 {
+              font-size: 20px;
+            }
+            button {
+              padding: 15px 30px;
+              font-size: 15px;
+            }
+          }
+        }
+      }
+
+      .part2 {
+        .box {
+          height: 200px;
+          .txt_con {
+            h3 {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .home_wrapper {
+    .deal_section {
+      .container {
+        flex-direction: column;
+
+        .box {
+          width: 100%;
+          flex: 1;
+
+          h2 {
+            font-size: 30px;
+          }
+
+          h3 {
+            font-size: 25px;
+          }
+          h4 {
+            font-size: 20px;
+            span {
+              font-size: 15px;
+            }
+          }
+
+          button {
+            background: var(--first-color-alt);
+            color: var(--first-color);
+            border-color: var(--first-color);
+            margin-top: 40px;
+            padding: 15px 30px;
+
+            &:hover {
+              background: var(--first-color);
+              color: var(--body-color);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .home_wrapper {
+    .home {
+      .container {
+        .txt_con {
+          h4 {
+            font-size: 15px;
+            padding-bottom: 5px;
+          }
+
+          h2 {
+            font-size: 25px;
+            padding-bottom: 5px;
+          }
+
+          h1 {
+            font-size: 40px;
+          }
+
+          p {
+            padding-top: 15px;
+          }
+
+          button {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+
+    .popular_section {
+      .nav {
+        h2 {
+          font-size: 20px;
+        }
+
+        .action_btn {
+          gap: 20px;
+
+          span {
+            height: 30px;
+            width: 30px;
+          }
+        }
+      }
+    }
+
+    .deal_section {
+      .container {
+        .box {
+          h2 {
+            font-size: 20px;
+          }
+
+          h3 {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+
+    .new_arrival {
+      .nav {
+        h2 {
+          text-transform: capitalize;
+          font-size: 20px;
+        }
+
+        .action_btn {
+          span {
+            height: 30px;
+            width: 30px;
+          }
+        }
+      }
+    }
+
+    .event_section {
+      .part1 {
+        flex-direction: column;
+        height: 500px;
+        .box {
+          height: fit-content;
+          .txt_con {
+            left: 20px;
+            h5 {
+              font-size: 14px;
+            }
+
+            h3 {
+              font-size: 20px;
+            }
+            button {
+              padding: 15px 30px;
+              font-size: 15px;
+            }
+          }
+        }
+      }
+
+      .part2 {
+        flex-direction: column;
+        .box {
+          height: 200px;
+          .txt_con {
+            h3 {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    width: 90%;
+  }
 }

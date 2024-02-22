@@ -1,10 +1,13 @@
 import "./product_detail.scss";
-import { icons, products } from "../../global_components/info";
-import { Link, Outlet, useParams } from "react-router-dom";
-
+import { icons, products } from "../../global_components/data/info";
+import { Link, NavLink, Outlet, useParams } from "react-router-dom";
+import { useShoppingCart } from "../../global_components/context/context";
 
 export const Product_details = () => {
   const { name, id } = useParams();
+  const { add_to_wishlist } = useShoppingCart();
+    window.scroll(0, 0);
+
 
   return (
     <>
@@ -21,10 +24,9 @@ export const Product_details = () => {
 
         <div className="container">
           {products.map((i, key) => {
-        
-            if (i.name === name && key === Math.floor(id)) {
+            if (i.name === name && i.id === Number(id)) {
               return (
-                <>
+                <div key={key}>
                   <div className="part1">
                     <div className="img_con">
                       <img src={i.img} alt="img" />
@@ -71,24 +73,26 @@ export const Product_details = () => {
                       </div>
 
                       <div className="action_btn">
-                        <input
-                          type="number"
-                          name="number"
-                          id="number"
-                          value={1}
-                        />
                         <button>add to cart</button>
-                        <button>{icons.favourite}</button>
+                        <button
+                          onClick={() => {
+                            add_to_wishlist(i.id);
+                          }}
+                        >
+                          {icons.favourite}
+                        </button>
                       </div>
                     </div>
                   </div>
 
                   <div className="part2">
                     <div className="nav">
-                      <Link to={`additional_info`}>
+                      <NavLink activeclassName="active" to={`additional_info`}>
                         additional info
-                      </Link>
-                      <Link to={`reviews`}>reviews(3)</Link>
+                      </NavLink>
+                      <NavLink activeclassName="active" to={`reviews`}>
+                        reviews(3)
+                      </NavLink>
                     </div>
                     <div className="wrapper">
                       <Outlet />
@@ -96,7 +100,9 @@ export const Product_details = () => {
                   </div>
 
                   <div className="part3">
-                    <h2><span>related</span> products</h2>
+                    <h2>
+                      <span>related</span> products
+                    </h2>
                     <div className="product_wrapper">
                       {products.slice(0, 4).map((i, key) => {
                         return (
@@ -105,13 +111,18 @@ export const Product_details = () => {
                               <img src={i.img} alt="img" />
 
                               <div className="action_btns">
-                                <Link to={`/${i.name}/${key}`}>
+                                <Link to={`/${i.name}/${i.id}`}>
                                   <div className=" btn">
                                     <button>{icons.view_icon}</button>
                                     <span>view</span>
                                   </div>
                                 </Link>
-                                <div className=" btn">
+                                <div
+                                  className=" btn"
+                                  onClick={() => {
+                                    add_to_wishlist(i.id);
+                                  }}
+                                >
                                   <button>{icons.favourite}</button>
                                   <span>favourite</span>
                                 </div>
@@ -148,7 +159,7 @@ export const Product_details = () => {
                       })}
                     </div>
                   </div>
-                </>
+                </div>
               );
             }
           })}

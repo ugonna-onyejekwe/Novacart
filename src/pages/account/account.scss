@@ -30,9 +30,13 @@
           font-size: 20px;
         }
 
-        &:hover {
+        &:hover,
+        &.active {
           background: var(--first-color);
           color: var(--body-color);
+          p {
+            color: var(--body-color);
+          }
         }
       }
     }
@@ -40,12 +44,12 @@
     .wrapper {
       flex: 3;
 
-       h3 {
-          text-transform: capitalize;
-          font-size: 16px;
-          padding: 20px 15px;
-          background: var(--border-color-alt);
-        }
+      h3 {
+        text-transform: capitalize;
+        font-size: 16px;
+        padding: 20px 15px;
+        background: var(--border-color-alt);
+      }
 
       .dashboard {
         border: 1px solid var(--border-color-alt);
@@ -58,13 +62,15 @@
 
       .order_section {
         border: 1px solid var(--border-color-alt);
-       
+        min-width: fit-content;
+        width: 100%;
 
         .box_con {
           display: flex;
 
           .box {
             flex: 1;
+
             h4 {
               text-transform: capitalize;
               padding: 15px;
@@ -76,6 +82,7 @@
               text-transform: capitalize;
               border-top: 1px solid var(--border-color-alt);
               border-right: 1px solid var(--border-color-alt);
+              white-space: nowrap;
             }
             &:last-child {
               h3 {
@@ -91,72 +98,145 @@
         }
       }
 
-      .update_pro_section{
-         border: 1px solid var(--border-color-alt);
-    
-        .input_con{
-            display: flex;
-            flex-direction: column;
-            gap:20px;
-padding: 20px ;
+      .update_pro_section {
+        border: 1px solid var(--border-color-alt);
 
-            input{
-                margin-top: 20px;
-                border-bottom: 1px solid var(--border-color-alt);
-                padding: 15px ;
-            }
+        .input_con {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          padding: 20px;
 
-            button{
-                width: fit-content;
-                padding: 10px 20px;
-            }
+          input {
+            margin-top: 20px;
+            border-bottom: 1px solid var(--border-color-alt);
+            padding: 15px;
+          }
+
+          button {
+            width: fit-content;
+            padding: 10px 20px;
+          }
         }
       }
 
-      .change_pass{
+      .change_pass {
         border: 1px solid var(--border-color-alt);
-    
-        .input_con{
-            display: flex;
-            flex-direction: column;
-            gap:20px;
-            padding: 20px ;
 
-            input{
-                border: 1px solid var(--border-color-alt);
-                padding: 15px;
-            }
+        .input_con {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          padding: 20px;
 
-            button{
-                padding: 10px 20px;
-                width: fit-content;
-            }
+          input {
+            border: 1px solid var(--border-color-alt);
+            padding: 15px;
+          }
+
+          button {
+            padding: 10px 20px;
+            width: fit-content;
+          }
         }
       }
 
-      .logout_section{
+      .logout_section {
         border: 1px solid var(--border-color-alt);
-        .con{
-            padding: 30px;
+        .con {
+          padding: 30px;
 
-            .modal{
-                padding: 20px;
-                border: 1px solid  var(--border-color-alt);
-                text-align: center;
+          .modal {
+            padding: 20px;
+            border: 1px solid var(--border-color-alt);
+            text-align: center;
 
-                .action_btn{
-                    margin-top: 20px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    gap: 20px;
-                    button{
-                        padding: 10px;
-                        font-size: 13px;
-                    }
-                }
+            .action_btn {
+              margin-top: 20px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 20px;
+              button {
+                padding: 10px;
+                font-size: 13px;
+              }
             }
+          }
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .account_section .container {
+    .navigator {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      a {
+        align-items: center;
+        justify-content: center;
+
+        .icon {
+          font-size: 15px;
+        }
+
+        p {
+          display: none;
+        }
+      }
+    }
+
+    .wrapper {
+      flex: 4;
+      h3 {
+        font-size: 14px;
+      }
+
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .account_section .container {
+    flex-direction: column;
+    .navigator {
+      flex-direction: row;
+      flex: 1;
+
+      a {
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        border-bottom: 1px solid var(--border-color-alt);
+
+        .icon {
+          font-size: 15px;
+        }
+
+        p {
+          display: none;
+        }
+      }
+    }
+
+    .wrapper {
+      flex: 1;
+      width: 100%;
+      overflow-x: scroll;
+
+      h3 {
+        font-size: 14px;
+      }
+
+      p {
+        font-size: 13px;
       }
     }
   }

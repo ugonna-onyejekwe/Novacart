@@ -1,7 +1,9 @@
-import { icons } from "../../global_components/info";
+import { icons } from "../../global_components/data/info";
 import "./contact.scss";
 
 export const Contact = () => {
+    window.scroll(0, 0);
+
   return (
     <div className="contact_section">
       <div className="heading">

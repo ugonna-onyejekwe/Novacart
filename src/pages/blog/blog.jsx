@@ -1,7 +1,9 @@
-import { blog } from "../../global_components/info";
+import { blog } from "../../global_components/data/info";
 import "./blog.scss"
 
 export const Blog = () => {
+    window.scroll(0, 0);
+
     return (
       <div className="blog_section">
         <div className="heading">
