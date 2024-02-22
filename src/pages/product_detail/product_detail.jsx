@@ -5,7 +5,7 @@ import { useShoppingCart } from "../../global_components/context/context";
 
 export const Product_details = () => {
   const { name, id } = useParams();
-  const { add_to_wishlist } = useShoppingCart();
+  const { add_to_wishlist, add_to_cart } = useShoppingCart();
     window.scroll(0, 0);
 
 
@@ -73,7 +73,13 @@ export const Product_details = () => {
                       </div>
 
                       <div className="action_btn">
-                        <button>add to cart</button>
+                        <button
+                          onClick={() => {
+                            add_to_cart(i.id);
+                          }}
+                        >
+                          add to cart
+                        </button>
                         <button
                           onClick={() => {
                             add_to_wishlist(i.id);
