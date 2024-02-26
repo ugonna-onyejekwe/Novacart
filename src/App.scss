@@ -280,6 +280,7 @@ button {
     white-space: nowrap;
     opacity: 0;
     transition: 0.4s ease-in-out;
+    z-index: -1;
 
     &::before {
       content: "";

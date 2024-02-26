@@ -6,8 +6,7 @@ import { useShoppingCart } from "../../global_components/context/context";
 export const Product_details = () => {
   const { name, id } = useParams();
   const { add_to_wishlist, add_to_cart } = useShoppingCart();
-    window.scroll(0, 0);
-
+  window.scroll(0, 0);
 
   return (
     <>

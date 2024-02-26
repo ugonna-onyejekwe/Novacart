@@ -7,15 +7,15 @@ import { useLocation } from "react-router-dom";
 export const Footer = () => {
   const { pathname } = useLocation();
 
-  const removepad = {
-    marginTop: "0",
+  const showfooterstyle = {
+    display: "block",
   };
-  const addpad = {
-    marginTop: "50px",
+  const removefooerstyle = {
+    display: "none",
   };
 
   return (
-    <footer style={pathname === "/login" ? removepad : addpad}>
+    <footer style={pathname === "/login" ? removefooerstyle : showfooterstyle}>
       <div className="news_letter_con">
         <div className="container">
           <h5>{icons.mail_icon} sign up to newsletter</h5>

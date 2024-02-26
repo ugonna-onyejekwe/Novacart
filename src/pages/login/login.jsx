@@ -5,8 +5,8 @@ import { icons } from "../../global_components/data/info";
 import { useState } from "react";
 
 export const Login = () => {
-    const [form, setform] = useState(false);
-    window.scroll(0,0)
+  const [form, setform] = useState(false);
+  window.scroll(0, 0);
   return (
     <div className="login_con">
       <div className={form ? "part1 login" : "part1 sign_up"}>
@@ -16,10 +16,6 @@ export const Login = () => {
               <h1>
                 <span>nova</span>cart
               </h1>
-            </Link>
-
-            <Link to={"/"} className="home_link">
-              home
             </Link>
           </div>
         </div>
@@ -65,11 +61,11 @@ export const Login = () => {
               <input type="password" placeholder="your password" required />
             </div>
 
+            <button>login</button>
             <p>
               Don't have an account?{" "}
               <span onClick={() => setform(!form)}>sign up</span>
             </p>
-            <button>login</button>
           </form>
         </div>
       </div>

@@ -54,43 +54,48 @@ export const Home = () => {
               <span className="swiper-next-arrow">{icons.right_arrow}</span>
             </div>
           </div>
-          <div className="wrapper">
-            <Swiper
-              spaceBetween={20}
-              modules={[Navigation, Autoplay]}
-              slidesPerView={2}
-              navigation={{
-                nextEl: "swiper-next-arrow",
-                prevEl: "swiper-prev-arrow",
-                clickable: true,
-              }}
-              breakpoints={{
-                425: {
-                  slidesPerView: 2,
-                },
-                500: {
-                  slidesPerView: 3,
-                },
-                768: {
-                  slidesPerView: 4,
-                },
-                1024: {
-                  slidesPerView: 6,
-                },
-              }}
-            >
-              {popular_categories.map((i, key) => {
-                return (
-                  <SwiperSlide key={key} className="box">
-                    <div className="img_con">
-                      <img src={i.img} alt="img" />
-                    </div>
-                    <h4>{i.name}</h4>
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
-          </div>
+        </div>
+        <div className="wrapper">
+          <Swiper
+            className="popular_pro_wrapper"
+            spaceBetween={20}
+            modules={[Navigation, Autoplay]}
+            slidesPerView={2}
+            autoplay={{
+              delay: 3000,
+            }}
+            navigation={{
+              nextEl: ".swiper-next-arrow",
+              prevEl: ".swiper-prev-arrow",
+              clickable: true,
+            }}
+            breakpoints={{
+              425: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+              },
+              500: {
+                slidesPerView: 3,
+              },
+              768: {
+                slidesPerView: 4,
+              },
+              1024: {
+                slidesPerView: 6,
+              },
+            }}
+          >
+            {popular_categories.map((i, key) => {
+              return (
+                <SwiperSlide key={key} className="box">
+                  <div className="img_con">
+                    <img src={i.img} alt="img" />
+                  </div>
+                  <h4>{i.name}</h4>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
         </div>
       </section>
 
@@ -165,7 +170,7 @@ export const Home = () => {
             })}
           </div>
           <div className="btn_con">
-            <Link to="/store">
+            <Link to="/shop">
               <button>more product</button>
             </Link>
           </div>
@@ -230,90 +235,93 @@ export const Home = () => {
               <span className="swiper-next-arrow">{icons.right_arrow}</span>
             </div>
           </div>
-          <div className="wrapper">
-            <Swiper
-              modules={[Navigation, Autoplay]}
-              spaceBetween={20}
-              slidesPerView={1}
-              navigation={{
-                nextEl: "swiper-next-arrow",
-                prevEl: "swiper-prev-arrow",
-                clickable: true,
-              }}
-              className="product_wrapper"
-              breakpoints={{
-                600: {
-                  slidesPerView: 2,
-                },
-                1024: {
-                  slidesPerView: 3,
-                },
-                1030: {
-                  slidesPerView: 4,
-                },
-              }}
-            >
-              {products.slice(5, 14).map((i, key) => {
-                return (
-                  <SwiperSlide className="product_box" key={key}>
-                    <div className="img_con">
-                      <img src={i.img} alt="img" />
+        </div>
+        <div className="wrapper">
+          <Swiper
+            modules={[Navigation, Autoplay]}
+            spaceBetween={20}
+            slidesPerView={1}
+            navigation={{
+              nextEl: ".swiper-next-arrow",
+              prevEl: ".swiper-prev-arrow",
+              clickable: true,
+            }}
+            autoplay={{
+              delay: 3000,
+            }}
+            className="product_wrapper"
+            breakpoints={{
+              600: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+              1030: {
+                slidesPerView: 4,
+              },
+            }}
+          >
+            {products.slice(5, 14).map((i, key) => {
+              return (
+                <SwiperSlide className="product_box" key={key}>
+                  <div className="img_con">
+                    <img src={i.img} alt="img" />
 
-                      <div className="action_btns">
-                        <Link to={`/${i.name}/${i.id}`}>
-                          <div className=" btn">
-                            <button>{icons.view_icon}</button>
-                            <span>view</span>
-                          </div>
-                        </Link>
-                        <div
-                          className=" btn"
+                    <div className="action_btns">
+                      <Link to={`/${i.name}/${i.id}`}>
+                        <div className=" btn">
+                          <button>{icons.view_icon}</button>
+                          <span>view</span>
+                        </div>
+                      </Link>
+                      <div
+                        className=" btn"
+                        onClick={() => {
+                          add_to_wishlist(i.id);
+                        }}
+                      >
+                        <button>{icons.favourite}</button>
+                        <span>favourite</span>
+                      </div>
+                      <div className="btn">
+                        <button>{icons.share_icon}</button>
+                        <span>share</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="txt_con">
+                    <p>clothing</p>
+                    <h3>{i.name}</h3>
+                    <div className="col">
+                      <div className="price">
+                        <div className="stars">
+                          {icons.full_star_icon}
+                          {icons.full_star_icon}
+                          {icons.full_star_icon}
+                          {icons.full_star_icon}
+                          {icons.half_star_icon}
+                        </div>
+                        <h4>
+                          {i.cur_price} <span>{i.odd_price}</span>
+                        </h4>
+                      </div>
+                      <div className="cart_btn btn">
+                        <button
                           onClick={() => {
-                            add_to_wishlist(i.id);
+                            add_to_cart(i.id);
                           }}
                         >
-                          <button>{icons.favourite}</button>
-                          <span>favourite</span>
-                        </div>
-                        <div className="btn">
-                          <button>{icons.share_icon}</button>
-                          <span>share</span>
-                        </div>
+                          {icons.cart_icon}
+                        </button>
+                        <span>add to cart</span>
                       </div>
                     </div>
-                    <div className="txt_con">
-                      <p>clothing</p>
-                      <h3>{i.name}</h3>
-                      <div className="col">
-                        <div className="price">
-                          <div className="stars">
-                            {icons.full_star_icon}
-                            {icons.full_star_icon}
-                            {icons.full_star_icon}
-                            {icons.full_star_icon}
-                            {icons.half_star_icon}
-                          </div>
-                          <h4>
-                            {i.cur_price} <span>{i.odd_price}</span>
-                          </h4>
-                        </div>
-                        <div className="cart_btn btn">
-                          <button
-                            onClick={() => {
-                              add_to_cart(i.id);
-                            }}
-                          >
-                            {icons.cart_icon}
-                          </button>
-                          <span>add to cart</span>
-                        </div>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
-          </div>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
         </div>
       </section>
 
